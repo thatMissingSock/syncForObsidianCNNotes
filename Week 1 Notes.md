@@ -12,6 +12,12 @@
 - PAN - stands for personal area network
 - [[#Intranets]] - a collection of LAN's connected by WAN's but administrated by one company/person
 - [[#Scalability]] - to be able to expand quickly without diminishing service
+- [[#Network Protocol Requirements]] - an agreement within a network in regards to certain requirements (such as encoding etc)
+- Traffic Class - a number that represents the prioritisation of data (i.e. video or email)
+- Payload Length - a number that represents how long the message is
+- Hop Limit - ensures that this message does not flow through the network endlessly (ensures that the packet gets discarded eventually)
+- Collisions - when more than one device sends a message causing both messages to become corrupt
+- [[#Reference Models]] - models that are used as visual aids to help explain how networks may work
 ### Pre-Session Notes
 
 #### Networking Today
@@ -105,6 +111,7 @@
 #### Software and External Links
 - He mentioned something called [packet tracer](https://www.netacad.com/cisco-packet-tracer)
 - It ties in with the [cisco qualifications](https://www.cisco.com/site/us/en/learn/training-certifications/certifications/index.html)
+- You can use [wireshark](https://www.wireshark.org/) to analyse packets
 
 #### Common Types of networks
 ##### The Internet
@@ -213,4 +220,113 @@
 	- virtual private networks (VPN)
 - You can't really think about network security without understanding the underlying switching and routing infrastructure
 
-####
+#### Network Rules
+##### Communications Fundamentals
+- Due to the vary in size and complexity in networks, they must agree on *how* to communicate
+- They must agree that
+	- there will be a source (sender)
+	- there will be a destination (receiver)
+	- there will be a channel that provides the path for the communication to occur (media)
+##### Communications Protocols
+- ***ALL*** communications are governed by protocols
+	- protocols are rules the communications will follow
+##### Rule Establishment
+- Individuals (or companies) must use the established rules to govern the conversation
+- Example of comms without rule establishment:
+![[Pasted image 20250116195523.png]]
+- Example of comms with rule establishment:
+![[Pasted image 20250116195547.png]]
+- Protocols should account for the following:
+	- an *identified* sender and receiver
+	- common language and grammar
+	- speed and timing of delivery
+	- confirmation/acknowledgment requirements
+##### Network Protocol Requirements
+- common protocols must be in agreement and include the following:
+	- message encoding
+	- message formatting and encapsulation
+	- message size
+	- message timing 
+	- message delivery options
+##### Message Encoding
+- This is the process of converting information into another *acceptable* form for transmission
+- Decoding is the opposite of above
+- A famous example is [base 64 encoding](https://en.wikipedia.org/wiki/Base64)
+- Below is an example flowchart:
+![[Pasted image 20250116200043.png]]
+##### Message Formatting and Encapsulation
+- *Every* time a message is sent, it **must** use a specific format/structure
+	- this depends on the type of message and the channel used to deliver the message
+- Without the change in formatting (and subsequent encapsulation), "raw" files would take too much data
+##### Message Size
+- Encoding between the devices is agreed which means that the encoding of messages has a *fixed* size
+	- messages are converted into bits
+	- bits are encoded into electrical impulses, light or sound (depending on the media)
+	- the destination host must decode these patterns
+##### Message Timing
+- Timing is made up of three elements:
+	- **flow control** - manages the rate of transmission and defines *how* much data can be sent
+	- **response timeout** - manages how long a device waits for a reply from the destination
+	- **access method** - manages when someone *can* send a message
+		- there may be rules governing issues like *"collisions"*  
+		- some protocols are proactive and attempt to prevent collisions whilst some are reactive and establish a recovery method after the collision occurs
+			- proactive == **SLOW**
+##### Message Delivery Options
+- **Unicast** - one to one communication
+- **Multicast** - one to many (typically not all)
+- **Broadcast** - one to all
+- (below is a visual aid explaining them all)
+![[Pasted image 20250116201816.png]]
+
+#### Protocols
+##### Network Protocol Overview
+- Defined as a common set of rules that can be implemented in:
+	- software
+	- hardware
+- Each protocol has its own:
+	- function
+	- format 
+	- rules
+- (below is a table showing a few protocol types and their description)
+
+| ==Protocol Type==      | ==Description==                                                                              |
+| ---------------------- | -------------------------------------------------------------------------------------------- |
+| Network Communications | enable two or more devices to communicate over one or more networks                          |
+| Network Security       | secure data to provide authentication, data integrity, and data encryption                   |
+| Routing                | enable routers to exchange route information, compare path information, and select best path |
+| Service Discovery      | used for the automatic detection of devices or services                                      |
+##### Protocol Interaction
+
+| ==Protocol==                        | ==Function==                                                                                                                                                                                        |
+| ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Hypertext Transfer Protocol (HTTP)  | Governs the way a web server and a web client interact                Defines content and format                                                                                                    |
+| Transmission Control Protocol (TCP) | Manages the individual conversations                                          Provides guaranteed delivery                                                                     Manages flow control |
+| Internet Protocol (IP)              | Delivers messages globally from the sender to the receiver                                                                                                                                          |
+| Ethernet                            | Delivers messages from one NIC to another NIC on the same Ethernet Local Area Network (LAN)                                                                                                                                                                                                    |
+#### Protocol Suites
+##### TCP/IP Protocol Suites
+- This is the main protocol used by the internet
+- It houses other protocols (see image below)
+- It is freely available to the public and can be used by any vendor
+- It is endorsed and approved by a standards organisation to *ensure interoperability*
+	![[Pasted image 20250116202943.png]]
+##### TCP/IP Communication Process
+- First the web server decides whether to use TCP or UDP
+- Then it adds the user's IP packet
+- The diagram below shows this encapsulation of data from a web page to a client
+![[Pasted image 20250116203546.png]]
+#### Reference Models
+##### The Benefits of Using a Layered Model
+- How a network operates is a *complex* concept and thus we use visual aids (like a layered model) to help explain and understand how it works
+- Below is the open system interconnection (OSI) model and the TCP/IP model
+![[Pasted image 20250116203817.png]]
+- The OSI is a *theoretical* model (high-level abstraction)
+- **Prof stated BOTH should be memorised**
+- There are some benefits to using *layered models:*
+	- it assists in protocol design as protocols operate at certain levels, this means that when you make a change to a protocol it **should not** affect any other protocol
+	- fosters competition as different vendors can work together
+	-  provides a *common* language to help describe the network functions and capabilities
+##### OSI REFERENCE MODEL
+![[Pasted image 20250116204204.png]]
+##### TCP/IP REFERENCE MODEL
+![[Pasted image 20250116204230.png]]
