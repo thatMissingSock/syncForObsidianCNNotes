@@ -1,5 +1,5 @@
 
-# Definitions:
+### Definitions:
 - [[#Host Roles ]] - a network where each computer is *easily* defined as either a client or host
 - [[#Peer-to-Peer ]] - a network where each computer is ***both*** the host and client
 - [[#End Devices]] - where a message is sent from or received
@@ -43,8 +43,12 @@
 - This is a device that connects two (or more) end devices together
 - Examples of this include:
 	- switches - devices that connect multiple devices within a network and use the relevant MAC addresses to forward data to the intended end device
+		- LAN switch - 
+		- multilayer switch - *"smarter"* than a standard switch as it acts as both a router and a  switch, in essence it has more usability
 	- wireless access points (WAPs) - devices that act as the bridge for wireless devices to connect to the network 
 	- routers - devices that connect local networks to a larger network (e.g. household network to the internet), it uses the IP addresses to forward data packets to the correct locations 
+		- depending on the firmware, it may come with a firewall built-in/support (IT CANNOT BE ADDED RETROACTIVELY)
+		- using the firmware, we can do something called [access control lists](https://learn.microsoft.com/en-us/windows/win32/secauthz/access-control-lists) to help *emulate* a firewall whilst maintaining the same router
 	- firewalls - devices that monitor and control network traffic based on certain rules and regulations (that can be set), can be software-based, hardware-based or a combination of both
 - These devices can:
 	- regenerate and retransmit data signals
@@ -69,6 +73,7 @@
 ##### Topology Diagrams
 - There are two *main* types of topology diagrams:
 	- **physical topology diagrams** - illustrate the physical location of intermediary devices and cable installation (see below)
+		- *note:* there is room and location numbers for each of the devices (where applicable)
 	![[Pasted image 20250116164545.png]]
 	- **logical topology diagrams** - illustrate the devices, ports/interfaces and the addressing scheme of the network (see below)
 	![[Pasted image 20250116164641.png]]
@@ -89,4 +94,10 @@
 - Provide slower speeds between the LAN's
 - Typically use copper wires, fiber optic and/or wireless communications 
 	- it depends on factors such as the environment, expected data transmission and cost
-	
+
+
+### In-Session Notes
+#### Software and External
+- He mentioned something called [packet tracer](https://www.netacad.com/cisco-packet-tracer)
+- It ties in with the [cisco qualifications](https://www.cisco.com/site/us/en/learn/training-certifications/certifications/index.html)
+#### 
