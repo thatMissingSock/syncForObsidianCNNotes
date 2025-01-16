@@ -1,0 +1,92 @@
+
+# Definitions:
+- [[#Host Roles ]] - a network where each computer is *easily* defined as either a client or host
+- [[#Peer-to-Peer ]] - a network where each computer is ***both*** the host and client
+- [[#End Devices]] - where a message is sent from or received
+- [[#Intermediary Network Devices]] - a device that is used to connect two (or more) end devices together
+- MAC (media access control) address - a unique identifier *every* device has to help identify it on a LAN. It is *usually* made up of a series of 12-character hexadecimal number 
+- [[#Network diagrams]] - these are diagrams to help represent how a network is connected and any other devices that are implemented (*CAN BE CALLED [[#Topology Diagrams]]*)
+- [[#LAN]] - stands for local area network
+- [[#WAN]] - stands for wide area network
+### Pre-Session Notes
+
+#### Networking Today
+- Communication has increased in the list of priorities we have for ourselves
+- In modern networks, you have multiple roles to help the "web" become somewhat easy to circumnavigate
+
+##### **Host Roles:**
+- *every* computer is called a host or "end device"
+- *servers are computers* that provide information to end devices
+- you can have different types of servers:
+	- web - servers run "web server software" whilst the end devices solely use browsers to help navigate the web servers
+	- email - servers run "email server software" whilst clients use software to access emails
+	- file - servers store these corporate and personal files whilst the end devices tend to only access them (remotely)
+- **clients** are computers that send requests to retrieve information from the servers
+
+##### **Peer-to-Peer:**
+- it is actually possible for every computer on the network to be ***both*** the client and the host but there are some limitations
+- its recommended to be reserved for *very* small networks
+- below is a table representing the advantages and disadvantages to using this type of network
+
+| ==Advantages==                                                  | ==Disadvantages==             |
+| --------------------------------------------------------------- | ----------------------------- |
+| Easy to set up                                                  | No centralized administration |
+| Less complex                                                    | Not as secure                 |
+| Lower cost                                                      | Not scalable                  |
+| Used for simple tasks: transferring files, sharing printers etc | Slower performance            |
+
+##### End Devices
+- These are devices in the network where the message originates from (the sender) or where the message ends up being recieved at with no other pathway
+	![[Pasted image 20250116160025.png]]
+
+##### Intermediary Network Devices
+- This is a device that connects two (or more) end devices together
+- Examples of this include:
+	- switches - devices that connect multiple devices within a network and use the relevant MAC addresses to forward data to the intended end device
+	- wireless access points (WAPs) - devices that act as the bridge for wireless devices to connect to the network 
+	- routers - devices that connect local networks to a larger network (e.g. household network to the internet), it uses the IP addresses to forward data packets to the correct locations 
+	- firewalls - devices that monitor and control network traffic based on certain rules and regulations (that can be set), can be software-based, hardware-based or a combination of both
+- These devices can:
+	- regenerate and retransmit data signals
+	- maintain information about what pathways exist in the network
+	- notify other devices of errors and communication failures
+
+##### Network Media
+
+| ==Media Types==                                           | ==Description==                                                  |
+| --------------------------------------------------------- | ---------------------------------------------------------------- |
+| Metal wires within cables                                 | Uses electrical impulses                                         |
+| Glass or plastic fibers within cables (fiber-optic cable) | Uses pulses of light                                             |
+| Wireless transmission                                     | Uses modulation of specific frequencies of electromagnetic waves |
+
+##### Network diagrams
+- *Port and interface* can be used interchangeably 
+- Network interface card (NIC) - a hardware component that allows a device to connect to a network, it can be built in or added but it **must have** the MAC address
+- Physical Port - a physical place where you can plug in a wire to connect external peripherals to the network
+- Interface - usually refers to the point of interaction between a device and the network (e.g. ethernet port)
+![[Pasted image 20250116163905.png]]
+
+##### Topology Diagrams
+- There are two *main* types of topology diagrams:
+	- **physical topology diagrams** - illustrate the physical location of intermediary devices and cable installation (see below)
+	![[Pasted image 20250116164545.png]]
+	- **logical topology diagrams** - illustrate the devices, ports/interfaces and the addressing scheme of the network (see below)
+	![[Pasted image 20250116164641.png]]
+
+##### Types Of Networks
+- The scalability of networks can very greatly depending on the user's need and the amount of devices connected to it
+- Because of this *vary*, there are two main different types of networks that can be implemented depending on what the user's requirements are (*they can be used in tandem*)
+
+###### LAN
+- These networks tend to connect devices in a limited area
+- There are usually administered by one person/organisation
+- Can provide high-speed bandwidth to all devices connected
+- LAN's are connected to each other via WAN's
+
+###### WAN
+- These are networks that link other LAN's together (over a wide geographical area)
+- Typically administered by one or more organisations
+- Provide slower speeds between the LAN's
+- Typically use copper wires, fiber optic and/or wireless communications 
+	- it depends on factors such as the environment, expected data transmission and cost
+	
