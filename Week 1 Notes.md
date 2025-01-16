@@ -330,3 +330,29 @@
 ![[Pasted image 20250116204204.png]]
 ##### TCP/IP REFERENCE MODEL
 ![[Pasted image 20250116204230.png]]
+
+#### Data Encapsulation
+##### Protocol Data Units
+- Encapsulation is the process where protocols add their information to the data
+- At each stage, a protocol data unit (PDU) has a different name to reflect its new functions
+- ***THERE IS NO UNIVERSAL NAMING CONVENTATIONS***
+	- *for this course only* - the PDUs are named according to TCP/IP protocols
+![[Pasted image 20250116205519.png]]
+
+#### Data Access
+##### Layer 3 Logical Address
+- IP packets contains *two* IP addresses
+	- source IP address
+	- destination IP address
+- addresses may be on the same link or remote
+- 10.0.0, 192.168 and 172.16 are all indications that its a private network
+- **EVERY** IP address contains two parts:
+	- Network portion (IPv4) or Prefix (IPv6)
+		- left-most part indicates the network group of which the IP address is a member
+		- EACH LAN AND WAN will have the **same** network portion
+	- Host portion (IPv4) or Interface ID (IPv6)
+		- the remaining parts identify the device within the network
+		- this portion **must** be unique for *every* device
+##### Role of the Data Link Layer Addresses: Same IP Network
+- If devices are on the same *ethernet network*, the data link frame will use the MAC address of the destination NIC
+- See [[#Definitions]] for more information
