@@ -128,7 +128,7 @@
 
 ##### Home and Small Office Internet Connections
 
-| Connection        | Description                                                                       |
+| ==Connection==    | ==Description==                                                                   |
 | ----------------- | --------------------------------------------------------------------------------- |
 | Cable             | high bandwidth, always on, internet offered by cable television service providers |
 | DSL               | high bandwidth, always on, internet connection that runs over a telephone line    |
@@ -139,12 +139,12 @@
 ##### Business Internet Connections
 - Businesses tend to need a higher bandwidth with managed and *dedicated* connections (see [Vorboss](https://vorboss.com/))
 
-| Type of Connection    | Description                                                                                                                              |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Dedicated Leased Line | These are reserved circuits within the service provider’s network that connect distant offices with private voice and/or data networking |
-| Ethernet (WAN)        | This extends LAN access technology into the WAN                                                                                          |
-| DSL                   | Business DSL is available in various formats including Symmetric Digital Subscriber Lines (SDSL)                                         |
-| Satellite             | This can provide a connection when a wired solution is not available                                                                     |
+| ==Type of Connection== | ==Description==                                                                                                                          |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Dedicated Leased Line  | These are reserved circuits within the service provider’s network that connect distant offices with private voice and/or data networking |
+| Ethernet (WAN)         | This extends LAN access technology into the WAN                                                                                          |
+| DSL                    | Business DSL is available in various formats including Symmetric Digital Subscriber Lines (SDSL)                                         |
+| Satellite              | This can provide a connection when a wired solution is not available                                                                     |
 
 ##### The Converging Network
 - Before, there would have been *separate lines* for telephone, video and data
